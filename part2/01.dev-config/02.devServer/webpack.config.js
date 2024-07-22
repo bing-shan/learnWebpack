@@ -6,6 +6,7 @@ module.exports = {
   entry: "./app.js",
   output: {
     clean: true,
+    publicPath: "/", //改为绝对路径
   },
   devServer: {
     static: path.resolve(__dirname, "./dist"),
@@ -28,6 +29,7 @@ module.exports = {
     ],
 
     server: "https",
+    historyApiFallback: true,
   },
   plugins: [new HtmlWebpackPlugin()],
 };
