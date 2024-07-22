@@ -26,6 +26,8 @@ module.exports = {
         target: "http://localhost:9000",
       },
     ],
+
+    server: "https",
   },
   plugins: [new HtmlWebpackPlugin()],
 };
