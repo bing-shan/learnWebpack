@@ -9,8 +9,8 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, "./dist"),
-    // compress: false,//在网络请求时是否使用压缩格式
-    port: 3000,
+    // compress: false,//在网络请求时是否使用压缩格式，默认为true。
+    port: 3000, //默认为8080
     headers: {
       "X-Access-Token": "abc123",
     },
