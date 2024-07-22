@@ -14,6 +14,18 @@ module.exports = {
     headers: {
       "X-Access-Token": "abc123",
     },
+
+    //视频中的配置，重启服务时会报错，需要将proxy配置为一个数组的形式
+    //https://webpack.js.org/configuration/dev-server/#devserverproxy
+    // proxy: {
+    //   "/api": "http://localhost:9000",
+    // },
+    proxy: [
+      {
+        context: ["/api"],
+        target: "http://localhost:9000",
+      },
+    ],
   },
   plugins: [new HtmlWebpackPlugin()],
 };
