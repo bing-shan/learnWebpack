@@ -30,6 +30,7 @@ module.exports = {
 
     server: "https",
     historyApiFallback: true,
+    host: "0.0.0.0",
   },
   plugins: [new HtmlWebpackPlugin()],
 };
